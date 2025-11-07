@@ -1,5 +1,12 @@
 # ai-agent-hello-world
 
+## Day 3
+[faq_bot.py](./faq_bot.py) - FAQ bot
+
+### Learnings:
+- Dictionary and looping with `items()`.
+- 
+
 ## Day 2
 [echo_bot.py](./echo_bot.py) - Simple conversation echo agent
 
