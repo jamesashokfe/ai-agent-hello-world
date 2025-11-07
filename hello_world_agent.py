@@ -1,3 +1,7 @@
+"""
+A simple Hello World AI agent that sends a user query to OpenRouter API and displays the response.
+"""
+
 import os
 from openai import OpenAI, api_key
 from dotenv import load_dotenv
@@ -11,8 +15,8 @@ if not api_key:
 
 # Initialize OpenAI client
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1",
-  api_key=api_key,
+    base_url="https://openrouter.ai/api/v1",
+    api_key=api_key,
 )
 
 # Prompt
@@ -20,11 +24,11 @@ user_query = input("User: ")
 
 # Send query and get response
 response = client.chat.completions.create(
-  model="openai/gpt-oss-20b:free",
-  messages=[
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": user_query}
-  ]
+    model="openai/gpt-oss-20b:free",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": user_query}
+    ]
 )
 
 # Show response
